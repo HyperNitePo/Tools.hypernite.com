@@ -1,11 +1,12 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-if="checkNav()" permanent app slide-y-transition class="hidden-md-and-up">
+    <v-navigation-drawer v-model="nav" disable-resize-watcher slide-x-transition absolute temporary class="hidden-md-and-up">
       <v-toolbar flat>
       <v-list>
         <v-list-tile>
           <v-list-tile-title class="title">
             導航
+            <v-icon @click.stop="nav = !nav" class="font-weight-medium right">arrow_back</v-icon>
           </v-list-tile-title>
         </v-list-tile>
         </v-list>
@@ -25,7 +26,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar dark app>
-      <v-toolbar-side-icon  @click="nav = !nav" class="hidden-md-and-up"><v-icon>menu</v-icon></v-toolbar-side-icon>
+      <v-toolbar-side-icon  @click.stop="nav = !nav" class="hidden-md-and-up"><v-icon>menu</v-icon></v-toolbar-side-icon>
       <v-img src="/img/headlogo/HNlogo.png" alt="HyperNite" max-width="90px" max-height="40px"></v-img>
       <v-spacer></v-spacer>
       <template v-if="$vuetify.breakpoint.mdAndUp">
@@ -86,10 +87,6 @@ export default {
     }
   },
   methods:{
-    checkNav(){
-      if (this.$vuetify.breakpoint.mdAndUp) this.nav = false;
-      return this.nav && this.$vuetify.breakpoint.mdAndDown
-    }
   },
   computed:{
 
