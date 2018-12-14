@@ -48,15 +48,18 @@
         </v-layout>
       </v-container>
     </v-content>
+    <Footer></Footer>
   </v-app>
 </template>
 
 <script>
 import Sidebar from './components/Sidebar'
+import Footer from './components/Footer'
 
 export default {
   name: 'App',
   components: {
+    Footer,
     Sidebar
   },
   data () {

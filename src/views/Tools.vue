@@ -29,7 +29,7 @@
         name: "Tools",
         data: ()=>{
           return{
-              list: Array.from(ToolJson),
+              list: ToolJson
           }
         },
         methods: {

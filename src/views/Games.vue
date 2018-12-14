@@ -28,7 +28,7 @@
         name: "Games",
         data: ()=>{
             return{
-                list: Array.from(GameJson)
+                list: GameJson
             }
         },
         methods: {
