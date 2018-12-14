@@ -97,3 +97,8 @@ export default {
 }
 
 </script>
+<style>
+  a, a:hover, a:active{
+    text-decoration: none;
+  }
+</style>
