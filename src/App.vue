@@ -12,8 +12,8 @@
       </v-toolbar>
       <v-divider></v-divider>
       <v-list dense>
-        <template  v-for="button in buttons">
-        <v-list-tile :key="button.goto" :to="button.goto">
+        <template  v-for="(button,index) in buttons">
+        <v-list-tile :key="index" :to="button.goto">
           <v-list-tile-action>
             <v-icon>{{button.icon}}</v-icon>
           </v-list-tile-action>
@@ -25,7 +25,7 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar dark app>
-      <v-toolbar-side-icon @click="nav = !nav" class="hidden-md-and-up"></v-toolbar-side-icon>
+      <v-toolbar-side-icon  @click="nav = !nav" class="hidden-md-and-up"><v-icon>menu</v-icon></v-toolbar-side-icon>
       <v-img src="/img/headlogo/HNlogo.png" alt="HyperNite" max-width="90px" max-height="40px"></v-img>
       <v-spacer></v-spacer>
       <template v-if="$vuetify.breakpoint.mdAndUp">
