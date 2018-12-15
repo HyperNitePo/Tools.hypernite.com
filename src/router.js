@@ -1,9 +1,7 @@
-import Vue from 'vue'
 import Router from 'vue-router'
 import Games from './views/Games'
 import Tools from './views/Tools'
 import Announce from "./views/Announce";
-
 //Tools
 import Test from './views/tools/Test'
 import Rand from './views/tools/RandNumGen'
@@ -48,5 +46,9 @@ export default new Router({
       name: 'randomgen',
       component: Rand
     },
+      {
+          path: '*',
+          redirect: '/'
+      },
   ]
 })
