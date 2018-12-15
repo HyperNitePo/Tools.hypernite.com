@@ -6,9 +6,9 @@
                     <v-container pa-0 grid-list-md text-xs-center>
                         <v-layout :key="lists" v-for="lists in list.length" row wrap>
                              <v-flex :class="$vuetify.breakpoint.mdAndUp ? 'xs3' : 'xs12'" :key="index" v-for="(button,index) in list[lists-1]">
-                                 <v-card hover>
+                                 <v-card hover  @click="$scrollToTop">
                                      <router-link :to="button.goto">
-                                         <v-img max-height="70px" aspect-ratio="1.5" alt="logo" :lazy-src="'img/tools/'+button.src"></v-img>
+                                         <v-card-media position="center center" alt="logo" height="150px" :src="'img/tools/'+button.src" aspect-ratio="1"></v-card-media>
                                          <v-card-title class="subheading grey darken-2 white--text font-weight-medium">{{button.name}}</v-card-title>
                                      </router-link>
                                  </v-card>

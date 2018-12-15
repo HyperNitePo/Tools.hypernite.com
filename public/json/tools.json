@@ -47,7 +47,7 @@
     {
       "name": "FUCKING TEST",
       "goto": "/tools/test",
-      "src": "tool1.png"
+      "src": "question.png"
     },
     {
       "name": "IP 搜尋",

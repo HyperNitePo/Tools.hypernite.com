@@ -6,11 +6,11 @@
                 <v-container pa-0 grid-list-md text-xs-center>
                     <v-layout :key="lists" v-for="lists in list.length" row wrap>
                         <v-flex :class="$vuetify.breakpoint.mdAndUp ? 'xs3' : 'xs12'" :key="index" v-for="(button,index) in list[lists-1]">
-                            <v-card hover>
-                                <a>
-                                    <v-img max-height="70px" aspect-ratio="1.5" alt="logo" :lazy-src="'/img/games/'+button.src"></v-img>
+                            <v-card hover @click="$scrollToTop">
+                                <router-link :to="'/'">
+                                    <v-card-media position="center center" alt="logo" height="150px" :src="'img/games/'+button.src" aspect-ratio="1"></v-card-media>
                                     <v-card-title class="subheading grey darken-2 white--text font-weight-medium">{{button.name}}</v-card-title>
-                                </a>
+                                </router-link>
                             </v-card>
                         </v-flex>
                     </v-layout>

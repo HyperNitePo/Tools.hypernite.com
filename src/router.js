@@ -12,6 +12,10 @@ import Test from './views/tools/Test'
 
 Vue.use(Router);
 
+Vue.prototype.$scrollToTop = ()=>{
+  window.scrollTo(0,0)
+};
+
 export default new Router({
   mode: 'history',
   routes: [

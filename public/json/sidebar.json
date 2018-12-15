@@ -1,14 +1,6 @@
 [
   {
-    "title": "SideBar",
-    "content": "<p> hi </p> "
-  },
-  {
-    "title": "SideBar 2",
-    "content": "<p> hi </p>"
-  },
-  {
-    "title": "SideBar 3",
-    "content": "<p> hi </p>"
+    "title": "自定義 SideBar",
+    "content": "<strong style=\"font-size:20px\"> 隨心所欲，寫你想寫 </strong>"
   }
 ]

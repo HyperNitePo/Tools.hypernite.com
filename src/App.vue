@@ -1,12 +1,12 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="nav" disable-resize-watcher slide-x-transition absolute temporary class="hidden-md-and-up">
+    <v-navigation-drawer v-model="nav" slide-x-transition fixed temporary class="hidden-md-and-up">
       <v-toolbar flat>
       <v-list>
         <v-list-tile>
           <v-list-tile-title class="title">
             導航
-            <v-icon @click.stop="nav = !nav" class="font-weight-medium right">arrow_back</v-icon>
+
           </v-list-tile-title>
         </v-list-tile>
         </v-list>
@@ -14,7 +14,7 @@
       <v-divider></v-divider>
       <v-list dense>
         <template  v-for="(button,index) in buttons">
-        <v-list-tile :key="index" :to="button.goto">
+        <v-list-tile :key="index" :to="button.goto" @click.native="$scrollToTop">
           <v-list-tile-action>
             <v-icon>{{button.icon}}</v-icon>
           </v-list-tile-action>
@@ -42,7 +42,7 @@
           <v-flex xs10>
             <router-view></router-view>
           </v-flex>
-          <v-flex>
+          <v-flex xs2>
             <Sidebar></Sidebar>
           </v-flex>
         </v-layout>
@@ -89,10 +89,7 @@ export default {
       ]
     }
   },
-  methods:{
-  },
   computed:{
-
   }
 }
 
