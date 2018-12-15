@@ -93,7 +93,6 @@ export default {
   computed:{
   }
 }
-
 </script>
 <style>
   a, a:hover, a:active{

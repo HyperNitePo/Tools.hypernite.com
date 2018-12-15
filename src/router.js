@@ -1,7 +1,9 @@
+import Vue from 'vue'
 import Router from 'vue-router'
 import Games from './views/Games'
 import Tools from './views/Tools'
-import Announce from "./views/Announce";
+import Announce from "./views/Announce"
+import NotFound from './views/NotFound'
 //Tools
 import Test from './views/tools/Test'
 import Rand from './views/tools/RandNumGen'
@@ -31,24 +33,30 @@ export default new Router({
       //component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
       component: Games
     },
+
     {
       path: '/tools',
       name: 'tools',
-      component: Tools
+      component: Tools,
+      children: [
+        {
+          path: 'test',
+          component: Test
+        },
+        {
+          path: 'randomgen',
+          component: Rand
+        },
+      ]
     },
     {
-      path: '/tools/test',
-      name: 'test',
-      component: Test
+      path: '/index.html',
+      redirect: '/'
     },
     {
-      path: '/tools/randomgen',
-      name: 'randomgen',
-      component: Rand
+      path: '*',
+      name: 'notFound',
+      component: NotFound
     },
-      {
-          path: '*',
-          redirect: '/'
-      },
   ]
 })
