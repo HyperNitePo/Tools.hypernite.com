@@ -41,6 +41,7 @@
         <v-layout :class="$vuetify.breakpoint.mdAndDown ? media : ''">
           <v-flex xs10>
             <router-view></router-view>
+            <br>
           </v-flex>
           <v-flex xs2>
             <Sidebar></Sidebar>

@@ -17,7 +17,6 @@
                 </v-container>
             </v-card-text>
         </v-card>
-        <br>
     </v-container>
 </template>
 

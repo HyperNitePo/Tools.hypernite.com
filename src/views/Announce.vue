@@ -7,7 +7,6 @@
             </v-card>
             <br :key="index">
         </template>
-    <br>
     </v-container>
 </template>
 
