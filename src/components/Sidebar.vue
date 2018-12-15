@@ -1,20 +1,17 @@
 <template>
     <v-container pa-0>
-        <v-card class="hide-overflow justify-center child-flex">
-            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhyperniteltd&tabs&width=340&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=191155521298273"
-                    width="400"
-                    height="200"
-                    style="border:none;overflow:scroll"
-                    scrolling="yes"
-                    frameborder="0"
-                    allowTransparency="true"
-                    allow="encrypted-media"></iframe>
+        <v-card class="hide-overflow">
+                <div class="fb-page resp-iframe" data-href="https://www.facebook.com/hyperniteltd/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/hyperniteltd/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/hyperniteltd/">Hypernite Po.</a></blockquote></div>
         </v-card>
         <br>
         <v-card>
             <v-card-title class="title grey darken-3 white--text">贊助我們</v-card-title>
             <v-card-text class="body-1">
-                贊助我們吧勇者大人! 贊助我們吧勇者大人! 贊助我們吧勇者大人! 贊助我們吧勇者大人! 贊助我們吧勇者大人! 贊助我們吧勇者大人!
+                贊助我們吧勇者大人! 贊助我們吧勇者大人!
+                贊助我們吧勇者大人! 贊助我們吧勇者大人!
+                贊助我們吧勇者大人! 贊助我們吧勇者大人!
             </v-card-text>
             <v-card-actions class="justify-center child-flex">
                 <v-btn class="primary">Paypal</v-btn> <v-btn class="primary">Alipay</v-btn>
@@ -39,6 +36,15 @@
             return{
               bar: SidebarJson,
             }
+        },
+        mounted: ()=>{
+                (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/zh_HK/sdk.js#xfbml=1&version=v2.12&appId=1193358790711987&autoLogAppEvents=1';
+                fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
         }
     }
 </script>

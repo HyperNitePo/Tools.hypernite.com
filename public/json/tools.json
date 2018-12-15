@@ -45,14 +45,14 @@
   ],
   [
     {
-      "name": "FUCKING TEST",
+      "name": "反轉文字",
       "goto": "/tools/test",
       "src": "question.png"
     },
     {
-      "name": "IP 搜尋",
-      "goto": "IpLocate",
-      "src": "tool1.png"
+      "name": "隨機數字生成器",
+      "goto": "/tools/randomgen",
+      "src": "question.png"
     },
     {
       "name": "Mask 轉換器",

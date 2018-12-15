@@ -6,7 +6,7 @@ import Announce from "./views/Announce";
 
 //Tools
 import Test from './views/tools/Test'
-
+import Rand from './views/tools/RandNumGen'
 //Games
 
 
@@ -42,6 +42,11 @@ export default new Router({
       path: '/tools/test',
       name: 'test',
       component: Test
+    },
+    {
+      path: '/tools/randomgen',
+      name: 'randomgen',
+      component: Rand
     },
   ]
 })
