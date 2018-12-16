@@ -13,7 +13,7 @@
 <script>
 
     export default {
-        name: "test",
+        name: "Test",
         data: ()=>{
             return{
                 input: '',

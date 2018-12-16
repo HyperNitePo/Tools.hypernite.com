@@ -7,6 +7,8 @@ import NotFound from './views/NotFound'
 //Tools
 import Test from './views/tools/Test'
 import Rand from './views/tools/RandNumGen'
+import Youtube from './views/tools/YoutubeDL'
+import APITest from './views/tools/APITest'
 //Games
 
 
@@ -21,12 +23,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'announce',
       component: Announce
     },
     {
       path: '/games',
-      name: 'games',
       // route level code-splitting
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
@@ -36,18 +36,23 @@ export default new Router({
 
     {
       path: '/tools',
-      name: 'tools',
-      component: Tools,
-      children: [
-        {
-          path: 'test',
+        component: Tools
+    },
+      {
+          path: '/tools/test',
           component: Test
-        },
-        {
-          path: 'randomgen',
+      },
+      {
+          path: '/tools/randomgen',
           component: Rand
-        },
-      ]
+      },
+      {
+          path: '/tools/youtubedl',
+          component: Youtube
+      },
+      {
+          path: '/tools/apitest',
+          component: APITest
     },
     {
       path: '/index.html',
@@ -55,7 +60,6 @@ export default new Router({
     },
     {
       path: '*',
-      name: 'notFound',
       component: NotFound
     },
   ]

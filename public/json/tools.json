@@ -1,9 +1,9 @@
 [
   [
     {
-      "name": "Mask 轉換器",
-      "goto": "Mask",
-      "src": "tool1.png"
+      "name": "API 測試",
+      "goto": "apitest",
+      "src": "question.png"
     },
     {
       "name": "IP 搜尋",
@@ -46,12 +46,12 @@
   [
     {
       "name": "反轉文字",
-      "goto": "/tools/test",
+      "goto": "test",
       "src": "question.png"
     },
     {
       "name": "隨機數字生成器",
-      "goto": "/tools/randomgen",
+      "goto": "randomgen",
       "src": "question.png"
     },
     {
@@ -61,8 +61,8 @@
     },
     {
       "name": "Youtube 影片下載",
-      "goto": "YTDownloader",
-      "src": "tool1.png"
+      "goto": "youtubedl",
+      "src": "question.png"
     }
   ]
 ]
