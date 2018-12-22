@@ -6,7 +6,6 @@
         <v-list-tile>
           <v-list-tile-title class="title">
             導航
-
           </v-list-tile-title>
         </v-list-tile>
         </v-list>
@@ -14,7 +13,7 @@
       <v-divider></v-divider>
       <v-list dense>
         <template  v-for="(button,index) in buttons">
-        <v-list-tile :key="index" :to="button.goto" @click.native="$scrollToTop">
+            <v-list-tile :key="index" :to="button.goto" @click.native="global.toTop">
           <v-list-tile-action>
             <v-icon>{{button.icon}}</v-icon>
           </v-list-tile-action>
@@ -56,6 +55,7 @@
 <script>
 import Sidebar from './components/Sidebar'
 import Footer from './components/Footer'
+import global from './gFunctions'
 
 export default {
   name: 'App',
@@ -65,6 +65,7 @@ export default {
   },
   data () {
     return {
+        global: global(),
       nav: false,
       media: [
         'column',

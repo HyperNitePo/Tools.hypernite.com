@@ -6,6 +6,7 @@
                 <v-text-field label="名字" v-model="name"></v-text-field>
                 <v-text-field :rules="[email.indexOf('@') !== -1 || 'Invalid format']" label="Email"
                               v-model="email"></v-text-field>
+                {{response}}
             </v-card-text>
             <v-card-actions>
                 <v-btn @click="submit" class="primary">Submit</v-btn>
@@ -26,16 +27,15 @@
         },
         methods: {
             submit() {
-                this.axios.post(
-                    'test.php',
-                    {
+                this.axios({
+                    method: 'post',
+                    url: 'test.php',
+                    data: {
                         name: this.name,
                         email: this.email
                     }
-                ).then(res => {
-                    if (res.data.success) {
-                        window.alert(res.data);
-                    }
+                }).then(res => {
+                    this.response = res.data.name + " & " + res.data.email
                 }).catch(error => window.alert(error))
             }
         }

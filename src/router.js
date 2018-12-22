@@ -14,10 +14,6 @@ import APITest from './views/tools/APITest'
 
 Vue.use(Router);
 
-Vue.prototype.$scrollToTop = ()=>{
-  window.scrollTo(0,0)
-};
-
 export default new Router({
   mode: 'history',
   routes: [

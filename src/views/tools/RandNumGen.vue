@@ -9,16 +9,22 @@
                     <v-text-field v-model="result" label="生成數字" disabled></v-text-field>
                 </v-flex>
             </v-card-text>
-            <v-btn class="primary" @click.prevent="generate()">生成</v-btn> <router-link to="/tools"><v-btn @click="$scrollToTop" class="primary">返回</v-btn></router-link>
+            <v-btn @click.prevent="generate()" class="primary">生成</v-btn>
+            <router-link to="/tools">
+                <v-btn @click="global.toTop" class="primary">返回</v-btn>
+            </router-link>
         </v-card>
     </v-container>
 </template>
 
 <script>
+    import global from '../../gFunctions'
+
     export default {
         name: "RandNumGen",
         data: ()=>{
             return{
+                global: global(),
                 min: 0,
                 max: 10,
                 result: 0,

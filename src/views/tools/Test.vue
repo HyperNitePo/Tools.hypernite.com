@@ -5,17 +5,22 @@
         <v-card-text>
             <v-textarea v-model="input" outline label="請輸入文字: " auto-grow autofocus browser-autocomplete></v-textarea>
         </v-card-text>
-        <v-btn class="primary" @click="reverse">反轉</v-btn> <router-link to="/tools"><v-btn @click="$scrollToTop" class="primary">返回</v-btn></router-link>
+        <v-btn @click="reverse" class="primary">反轉</v-btn>
+        <router-link to="/tools">
+            <v-btn @click="global.toTop" class="primary">返回</v-btn>
+        </router-link>
     </v-card>
     </v-container>
 </template>
 
 <script>
+    import global from '../../gFunctions'
 
     export default {
         name: "Test",
         data: ()=>{
             return{
+                global: global(),
                 input: '',
             }
         },
