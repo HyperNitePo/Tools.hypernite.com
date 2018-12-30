@@ -9,7 +9,7 @@
                 {{response}}
             </v-card-text>
             <v-card-actions>
-                <v-btn @click="submit" class="primary">Submit</v-btn>
+                <v-btn @click="submit()" class="primary">Submit</v-btn>
             </v-card-actions>
         </v-card>
     </v-container>
@@ -25,9 +25,9 @@
                 response: ''
             }
         },
-        methods: {
-            submit() {
-                this.axios({
+        computed: {
+            submit: () => {
+                this.$axios({
                     method: 'post',
                     url: 'test.php',
                     data: {

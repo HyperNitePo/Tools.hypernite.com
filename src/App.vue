@@ -27,11 +27,11 @@
     <v-toolbar dark app>
       <v-toolbar-side-icon  @click.stop="nav = !nav" class="hidden-md-and-up"><v-icon>menu</v-icon></v-toolbar-side-icon>
       <v-img src="/img/headlogo/HNlogo.png" alt="HyperNite" max-width="90px" max-height="40px"></v-img>
-      <v-spacer></v-spacer>
       <template v-if="$vuetify.breakpoint.mdAndUp">
         <template v-for="(button,index) in buttons">
           <router-link :key="index" :to="button.goto"><v-btn flat >{{button.name}}</v-btn></router-link>
         </template>
+        <v-spacer></v-spacer>
       <v-btn flat href="//www.hypernite.com">返回主頁</v-btn>
       </template>
     </v-toolbar>

@@ -10,7 +10,7 @@ import axios from "axios";
 
 let config = {
     baseURL: 'https://test.hypernite.com/eric',
-    timeout: 60 * 1000, // Timeout
+    timeout: 20 * 1000, // Timeout
     withCredentials: false, // Check cross-site Access-Control
     //transformRequest: [(data) => JSON.stringify(data.data)],
     headers: {
